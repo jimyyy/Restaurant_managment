@@ -1,0 +1,60 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding " style="margin-top: 100px;">
+    <div class="alert alert-success alert alert-dismissible fade show" role="alert" *ngIf="alert" style="margin-top: 130px;">
+        <strong>success</strong>your data has been entered succesfully
+        <button (click)="closealert()"type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+
+                    <h2>{{title}}Plat</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #addplatForm="ngForm" (ngSubmit)="addoreditplat()">
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Plat Name *"
+                                    [(ngModel)]="plat.platName" [ngModelOptions]="{standalone:true}">
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="pnone" placeholder="price *"
+                                    [(ngModel)]="plat.price" [ngModelOptions]="{standalone:true}">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <textarea class="form-control" placeholder="Description *"
+                                    [(ngModel)]="plat.description" [ngModelOptions]="{standalone:true}"></textarea>
+                            </div>
+                            <button type="button" (click)='filePicker.click()' class="btn btn-primary py-3 px-5">Select profile image</button>
+                            <div class="form-group">
+                                <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                                    (change)='onImageSelected($event)' />
+                            </div>
+                            <img [src]="imagePreview" *ngIf="imagePreview" width="100px" height="100px">
+
+
+
+
+
+                            <div class="regerv_btn col-md-12">
+                                <button class="btn_4">{{title}}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::regervation_part end::-->

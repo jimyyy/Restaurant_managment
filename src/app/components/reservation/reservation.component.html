@@ -1,0 +1,66 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding" style ="margin-top: 100px;">
+    <div class="alert alert-success alert alert-dismissible fade show" role="alert" *ngIf="alert"
+        style="margin-top: 130px;">
+        <strong>success</strong>your data has been entered succesfully
+        <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Reservation</p>
+                    <h2>Book A Table</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #reservationForm="ngForm" (ngSubmit)="reservation()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="" placeholder="firstName *"
+                                    [(ngModel)]="user.firstName" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="inputPassword4"
+                                    placeholder="Email address *" [(ngModel)]="user.email"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+
+                                <input type="number" class="form-control" id="inputEmail4" placeholder="persons *"
+                                    [(ngModel)]="user.persons" [ngModelOptions]="{standalone:true}">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="pnone" placeholder="Phone number *"
+                                    [(ngModel)]="user.tel" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="input-group date">
+                                    <input id="datepicker" type="date" class="form-control" placeholder="Date *"
+                                        [(ngModel)]="user.date" [ngModelOptions]="{standalone:true}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" id="Textarea" rows="4" placeholder="Your Note *"
+                                    [(ngModel)]="user.message" [ngModelOptions]="{standalone:true}"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button class="btn_4">Book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::regervation_part end::-->

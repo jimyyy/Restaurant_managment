@@ -1,0 +1,56 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding "style ="margin-top: 100px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    
+                    <h2>{{title}} Chef</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #chefForm="ngForm" (ngSubmit)="cheforedit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Fisrt Name *" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Last Name *" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Email adress *" [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" id="inputEmail4" placeholder="tel *"  [(ngModel)]="user.tel" [ngModelOptions]="{standalone:true}">
+                            </div>
+                           
+                           
+                           
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="pnone" placeholder="password *" [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="pnone" placeholder="speciality *" [(ngModel)]="user.speciality" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="pnone" placeholder="Experience *" [(ngModel)]="user.Experience" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            
+                            
+                            
+
+                        <div class="regerv_btn">
+                            <button class="btn_4">{{title}}</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::regervation_part end::-->
+

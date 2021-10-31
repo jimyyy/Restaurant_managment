@@ -1,0 +1,196 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding " style="margin-top: 100px;">
+    <div class="alert alert-success alert alert-dismissible fade show" role="alert" *ngIf="alert"
+        style="margin-top: 130px;">
+        <strong>success</strong>your data has been entered succesfully
+        <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+
+                    <h2>{{title}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form [formGroup]="signupform">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="input" placeholder="Fisrt Name *"
+                                    formControlName="firstName">
+                            </div>
+
+                            <div
+                                *ngIf="signupform.controls['firstName'].invalid && (signupform.controls['firstName'].touched ||signupform.controls['firstName'].dirty) ">
+                                <div *ngIf="signupform.controls['firstName'].errors.required" style="color: white;">
+                                    first name is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['firstName'].errors.minlength" style="color: white;">
+                                    first name must have at leatse 3 characters
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputlast" placeholder="Last Name *"
+                                    formControlName="lastName">
+                            </div>
+                            <div
+                                *ngIf="signupform.controls['lastName'].invalid && (signupform.controls['lastName'].touched ||signupform.controls['lastName'].dirty) ">
+                                <div *ngIf="signupform.controls['lastName'].errors.required" style="color: white;">
+                                    Last name is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['lastName'].errors.minlength" style="color: white;">
+                                    Last name must have at leatse 5 characters
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Email adress *"
+                                    formControlName="email">
+                            </div>
+
+
+                            <div
+                                *ngIf="signupform.controls['email'].invalid && (signupform.controls['email'].touched ||signupform.controls['email'].dirty) ">
+                                <div *ngIf="signupform.controls['email'].errors.required" style="color: white;">
+                                    email name is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['email'].errors.email" style="color: white;">
+                                    email is invalid
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" id="inputEmail4" placeholder="tel *"
+                                    formControlName="tel">
+                            </div>
+
+
+
+
+
+                            <div
+                                *ngIf="signupform.controls['tel'].invalid && (signupform.controls['tel'].touched ||signupform.controls['tel'].dirty) ">
+                                <div *ngIf="signupform.controls['tel'].errors.required" style="color: white;">
+                                    phone is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['tel'].errors.minlength" style="color: white;">
+                                    phone must have at leatse 8 characters
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="pnone" placeholder="password *"
+                                    formControlName="password">
+                            </div>
+                            <div
+                                *ngIf="signupform.controls['password'].invalid && (signupform.controls['password'].touched ||signupform.controls['password'].dirty) ">
+                                <div *ngIf="signupform.controls['password'].errors.required" style="color: white;">
+                                    password is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['password'].errors.minlength" style="color: white;">
+                                    password must have at leatse 8 characters
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="pnone" placeholder="confirm Password *"
+                                    formControlName="confirmPassword">
+                            </div>
+
+
+
+                            <div
+                                *ngIf="signupform.controls['confirmPassword'].invalid && (signupform.controls['confirmPassword'].touched ||signupform.controls['confirmPassword'].dirty) ">
+                                <div *ngIf="signupform.controls['confirmPassword'].errors.required"
+                                    style="color: white;">
+                                    confirmPassword is required
+
+
+                                </div>
+                                <div *ngIf="signupform.controls['confirmPassword'].errors.mustMatch"
+                                    style="color: white;">
+                                    confirm Password does not match password
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="regerv_btn">
+                                <button class="btn_4" (click)="signup(signupform.value)">Signup</button>
+                            </div>
+                            <img [src]="source">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::regervation_part end::-->

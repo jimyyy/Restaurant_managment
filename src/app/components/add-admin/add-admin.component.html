@@ -1,0 +1,49 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding "style ="margin-top: 100px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    
+                    <h2> {{title}} Admin</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #addForm="ngForm" (ngSubmit)="addoredit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="fisrt Name *"  [(ngModel)]="user.firstName" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="last Name *" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="email adress *" [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" id="inputEmail4" placeholder="tel *" [(ngModel)]="user.tel" [ngModelOptions]="{standalone:true}" >
+                            </div>
+                           
+                           
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="pnone" placeholder="password *" [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="pnone" placeholder="confirmPassword *" [(ngModel)]="user.confirmPassword" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            
+
+                        <div class="regerv_btn">
+                            <button class="btn_4">{{title}}</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::regervation_part end::-->
